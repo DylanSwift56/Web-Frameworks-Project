@@ -1,25 +1,5 @@
 extends layout
 
 block content
-	head
-		link#bootstrap-css(href='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css', rel='stylesheet')
-		script(src='//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js')
-		script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-
-		
-	.container
-		h1.form-heading login Form
-		.login-form
-		.main-div
-			.panel
-				h2 Login
-				p Please enter your email and password
-			form#Login
-			.form-group
-				input#inputEmail.form-control(type='email', placeholder='Email Address')
-			.form-group
-				input#inputPassword.form-control(type='password', placeholder='Password')
-			.forgot
-				a(href='#') Don't have an account? Register here
-			button.btn.btn-primary(type='submit') Login
-		p.botto-text  Designed by Sunil Rajput
+  h1= title
+  p Welcome to #{title}

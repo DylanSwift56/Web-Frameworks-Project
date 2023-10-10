@@ -2,17 +2,18 @@
 const index = function(req, res){
   res.render('index', { title: 'Home Page' });
 };
-//registration page
-const registration = function(req, res){
-  res.render('registration', { title: 'Registration' });
+
+const login = function(req, res){
+  res.render('login', { title: 'Login' });
 };
 
-const mainpage = function(req, res){
-  res.render('mainpage', { title: 'Main Page' });
+const register = function(req, res){
+  res.render('register', { title: 'Register' });
 };
+
 
 module.exports = {
   index,
-  registration,
-  mainpage
-};
+  login, 
+  register
+ }

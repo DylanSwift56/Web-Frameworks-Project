@@ -8,6 +8,18 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
-    script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js')
-    script(src='/javascripts/bootstrap.min.js')
+    nav.navbar.fixed-top.navbar-toggleable-md.navbar-inverse
+      .container
+        button.navbar-toggler.navbar-toggler-right(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        a.navbar-brand(href='/ ') Bus Timetables
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about/') Register
+            li.nav-item
+              a.nav-link(href='/about/') Main Page 				  
+            li.nav-item
+              a.nav-link(href='/about/') Login 	
+            			  
+    

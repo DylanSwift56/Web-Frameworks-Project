@@ -1,58 +1,49 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
 
-body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg") ;background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
-
-body{
-	background-color: blue;
-}
-
-.form-heading { color:#fff; font-size:23px;}
-.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
-.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}
-.login-form .form-control {
-  background: #f7f7f7 none repeat scroll 0 0;
-  border: 1px solid #d4d4d4;
-  border-radius: 4px;
-  font-size: 14px;
-  height: 50px;
-  line-height: 50px;
-}
-.main-div {
-  background: #ffffff none repeat scroll 0 0;
-  border-radius: 2px;
-  margin: 10px auto 30px;
-  max-width: 38%;
-  padding: 50px 70px 70px 71px;
-}
-
-.login-form .form-group {
-  margin-bottom:10px;
-}
-.login-form{ text-align:center;}
-.forgot a {
-  color: #777777;
-  font-size: 14px;
-  text-decoration: underline;
-}
-.login-form  .btn.btn-primary {
-  background: #f0ad4e none repeat scroll 0 0;
-  border-color: #f0ad4e;
+body {
+  font-family: Arial, sans-serif;
   color: #ffffff;
-  font-size: 14px;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  padding: 0;
+  background-color: #d18c1d;
 }
-.forgot {
-  text-align: left; margin-bottom:30px;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
 }
-.botto-text {
-  color: #ffffff;
-  font-size: 14px;
-  margin: auto;
+
+.navbar {
+  background-color: #ad1d28;
+  border-color: #911821;
 }
-.login-form .btn.btn-primary.reset {
-  background: #ff9900 none repeat scroll 0 0;
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
 }
-.back { text-align: left; margin-top:10px;}
-.back a {color: #444444; font-size: 13px;text-decoration: none;}
+
+.banner {
+  margin-top: 4em;
+  border-bottom: 1px solid #469ea8;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.panel-body{
+	padding: 20px;
+	margin: 0;
+	background: #ffffff;
+	
+}
+
+..panel.panel-default{
+	 margin: auto;
+  width: 50%;
+}
+
