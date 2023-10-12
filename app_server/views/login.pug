@@ -1,31 +1,30 @@
 extends layout
 
 block content
-  link#bootstrap-css(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css' rel='stylesheet')
-  script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js')
+  script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js')
   script(src='//code.jquery.com/jquery-1.11.1.min.js')
 
-
-  .container
-    .row
-      .span12
-        form.form-horizontal(action='' method='POST')
-          fieldset
-            #legend
-              legend Login
-            .control-group
-
-              label.control-label(for='username') Username
-              .controls
-                input#username.input-xlarge(type='text' name='username' placeholder='')
-            .control-group
-
-              label.control-label(for='password') Password
-              .controls
-                input#password.input-xlarge(type='password' name='password' placeholder='')
-            .control-group
-
-              .controls
-                button.btn.btn-success Login
-            			  
-    
+  .container-fluid
+    .col-12.col-md-8
+      .row.centered-form 
+        .col-5.col-md-12
+          .panel.panel-default
+            .panel-heading
+              h3.panel-title
+                | Please sign in to view bus timetables!
+            .panel-body
+              form(role='form')
+                .row
+                .form-group
+                  .row
+                  .col-8
+                    .form-group
+                      label(for='email') Email:
+                      input#password.form-control.input-sm(type='text' name='email' )   
+                  .row
+                  .col-8
+                    .form-group
+                      label(for='password') Password:
+                      input#password.form-control.input-sm(type='password' name='password')
+                .col-8
+                  input.btn.btn-info.btn-block(type='submit' value='Login')

@@ -2,16 +2,28 @@
 
 body {
   font-family: Arial, sans-serif;
-  color: #ffffff;
+  color: #000000;
   background-color: #d18c1d;
+
+}
+
+.card{
+	background: #a9cfc7;
+	margin-bottom: 20px;
+	margin-left: 20%;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lobster', cursive;
 }
 
+label{
+	color:#000000;
+}
+
+
 .navbar {
-  background-color: #ad1d28;
+  background: #a9cfc7;
   border-color: #911821;
 }
 
@@ -36,14 +48,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .panel-body{
-	padding: 20px;
-	margin: 0;
+	padding: 50px;
+	
 	background: #ffffff;
 	
 }
 
-..panel.panel-default{
-	 margin: auto;
-  width: 50%;
+.panel-heading{
+	padding: 20px;
+	color: #4287f5;
 }
 
+
+.home-container .login-container{
+	width: 100%;
+	margin: 10em;	
+}
+
+.panel.panel-default{
+}

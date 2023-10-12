@@ -1,5 +1,43 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  
+  .home-container
+    .col-10.col-md-6
+
+      .card
+        .card-block
+          h4
+            a(href="/location") Tralee
+          p Next bus is at 13:00
+            span.badge.badge-pill.badge-default.float-right 100m
+          .facilities
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning Food
+            span.badge.badge-warning Premium wifi
+			
+    .col-10.col-md-6
+
+      .card
+        .card-block
+          h4
+            a(href="/location") Listowel
+          p Next bus is at 12:00
+            span.badge.badge-pill.badge-default.float-right 100m
+          .facilities
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning Food
+            span.badge.badge-warning Premium wifi
+			
+    .col-10.col-md-6
+
+      .card
+        .card-block
+          h4
+            a(href="/location") Killarney
+          p Next bus is at 14:00
+            span.badge.badge-pill.badge-default.float-right 100m
+          .facilities
+            span.badge.badge-warning Hot drinks
+            span.badge.badge-warning Food
+            span.badge.badge-warning Premium wifi

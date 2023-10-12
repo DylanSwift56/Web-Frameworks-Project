@@ -3,9 +3,10 @@ extends layout
 block content
   script(src='//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js')
   script(src='//code.jquery.com/jquery-1.11.1.min.js')
-  .container
+  .container-fluid
+  
     .row.centered-form
-      .col-xs-12.col-sm-8.col-md-4.col-sm-offset-2.col-md-offset-4
+      .col-6
         .panel.panel-default
           .panel-heading
             h3.panel-title
@@ -13,10 +14,10 @@ block content
           .panel-body
             form(role='form')
               .row
-                .col-xs-6.col-sm-6.col-md-6
+                .col
                   .form-group
                     input#first_name.form-control.input-sm(type='text' name='first_name' placeholder='First Name')
-                .col-xs-6.col-sm-6.col-md-6
+                .col
                   .form-group
                     input#last_name.form-control.input-sm(type='text' name='last_name' placeholder='Last Name')
               .form-group
