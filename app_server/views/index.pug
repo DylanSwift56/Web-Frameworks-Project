@@ -3,41 +3,33 @@ extends layout
 block content
   
   .home-container
-    .col-10.col-md-6
+    
+    .justify-content-center 
+      .col-10.col-md-10
+        .search-bar
+          h2 Search for a Bus Stop
+          .input-group
+            input.form-control.rounded(type='search', placeholder='Search', aria-label='Search', aria-describedby='search-addon')
+            button.btn.btn-outline-primary(type='button') Search
 
-      .card
-        .card-block
-          h4
-            a(href="/location") Tralee
-          p Next bus is at 13:00
-            span.badge.badge-pill.badge-default.float-right 100m
-          .facilities
-            span.badge.badge-warning Hot drinks
-            span.badge.badge-warning Food
-            span.badge.badge-warning Premium wifi
-			
-    .col-10.col-md-6
+        .card
+          .card-block
+            h4
+              a(href="/location") Tralee
+            p Next bus is at 13:00 to Listowel
+              span.badge.badge-pill.badge-default.float-right 100m
 
-      .card
-        .card-block
-          h4
-            a(href="/location") Listowel
-          p Next bus is at 12:00
-            span.badge.badge-pill.badge-default.float-right 100m
-          .facilities
-            span.badge.badge-warning Hot drinks
-            span.badge.badge-warning Food
-            span.badge.badge-warning Premium wifi
-			
-    .col-10.col-md-6
+        .card
+          .card-block
+            h4
+              a(href="/location") Listowel
+            p Next bus is at 12:00 to Limerick
+              span.badge.badge-pill.badge-default.float-right 22km
 
-      .card
-        .card-block
-          h4
-            a(href="/location") Killarney
-          p Next bus is at 14:00
-            span.badge.badge-pill.badge-default.float-right 100m
-          .facilities
-            span.badge.badge-warning Hot drinks
-            span.badge.badge-warning Food
-            span.badge.badge-warning Premium wifi
+
+        .card
+          .card-block
+            h4
+              a(href="/location") Killarney
+            p Next bus is at 14:00 to Cork
+              span.badge.badge-pill.badge-default.float-right 30km

@@ -60,10 +60,18 @@ label{
 }
 
 
-.home-container .login-container{
-	width: 100%;
-	margin: 10em;	
+.home-container{
+
+	margin-top: 5%;
+
 }
 
 .panel.panel-default{
+}
+
+.search-bar{
+	width: 40%;
+	margin-left:20%;
+	margin-bottom: 5%;
+	
 }
