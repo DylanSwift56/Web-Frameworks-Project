@@ -3,8 +3,6 @@
 const mongoose = require('mongoose');
 const timetables = mongoose.model('Timetables');
 
-
-
 const login = function(req, res){
   res.render('login', { title: 'Login' });
 };
@@ -51,6 +49,28 @@ const timetablesCreate = function (req, res) {
 	});
  };
  
+const timetablesReadAll = function(req, res){
+		timetables
+		.find() 
+		.then((timetable,err) => { 
+			if (!timetable) {
+			  res	
+				.status(404) 
+				.json({	
+				  "message": "timetableid not found"
+				});	 
+			  return;
+			} else if (err) {
+			  res	
+				.status(404) 
+				.json(err); 
+			  return; 	
+			}
+			res		
+			  .status(200)
+			  .json(timetable);
+		  });	
+};
 
  
  
@@ -102,6 +122,9 @@ const timetablesDeleteOne = function (req, res) {
 	.status(200)
 	.json({"status" : "success"});
  };
+ 
+
+
 
 
 
@@ -114,5 +137,6 @@ module.exports = {
   timetablesListByDistance,
   timetablesReadOne,
   timetablesUpdateOne,
-  timetablesDeleteOne
+  timetablesDeleteOne,
+  timetablesReadAll
  }

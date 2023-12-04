@@ -9,7 +9,7 @@ const ctrlMain = require('../controllers/main');
 
 router
 	.route('/timetables')
-	.get(ctrlMain.timetablesListByDistance)
+	.get(ctrlMain.timetablesReadAll)
 	.post(ctrlMain.timetablesCreate);
 	
 router
