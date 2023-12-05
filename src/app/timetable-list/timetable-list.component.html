@@ -1,0 +1,7 @@
+<div class="card" *ngFor="let timetable of timetables">
+<div class="card-block">
+<h4><a href="#">{{timetable.location}}</a></h4>
+<span *ngFor="let route of timetable.bus_routes" class="badge badge-pill badge-default">{{route}}</span>
+<p class="nextbus"><a>The next bus is at </a><a>{{timetable.next_bus}}</a></p>
+</div>
+</div>
