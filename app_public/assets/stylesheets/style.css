@@ -1,0 +1,82 @@
+@import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
+
+body {
+  font-family: Arial, sans-serif;
+  color: #000000;
+  background-color: #d18c1d;
+
+}
+
+.card{
+	background: #a9cfc7;
+	margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lobster', cursive;
+}
+
+label{
+	color:#000000;
+}
+
+
+.navbar {
+  background: #a9cfc7;
+  border-color: #911821;
+}
+
+.navbar-brand {
+  font-family: 'Lobster', cursive;
+}
+
+.banner {
+  margin-top: 4em;
+  border-bottom: 1px solid #469ea8;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.centered-form{
+	margin-top: 60px;
+}
+
+.centered-form .panel{
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.panel-body{
+	padding: 50px;
+	
+	background: #ffffff;
+	
+}
+
+.panel-heading{
+	padding: 20px;
+	color: #4287f5;
+}
+
+
+.home-container{
+
+	margin-top: 5%;
+	margin-left: 25%;
+
+}
+
+.panel.panel-default{
+}
+
+.search-bar{
+	width: 40%;
+	margin-left:20%;
+	margin-bottom: 5%;
+	
+}
+
+span{
+	margin-right:10px;
+	
+}

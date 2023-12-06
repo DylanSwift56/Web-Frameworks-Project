@@ -1,4 +1,4 @@
-require('./app_server/models/db.js');
+require('./app_api/models/db.js');
 
 const express = require('express');
 const path = require('path');
@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 const index = require('./app_server/routes/index');
-const users = require('./app_server/routes/users');
+const apiRoutes = require('./app_api/routes/index');
 
 const app = express();
 
@@ -23,9 +23,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'app_public')));
+
+
+app.use('/api', function(req, res, next) {
+res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
+res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+next();
+});
+
 
 app.use('/', index);
-app.use('/users', users);
+//app.use('/users', users);
+
+app.use('/api', apiRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
