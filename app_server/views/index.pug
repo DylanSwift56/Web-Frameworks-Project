@@ -1,5 +1,7 @@
 extends layout
 
+include _includes/sharedHTMLfunctions
+
 block content
   
   .home-container
@@ -12,13 +14,13 @@ block content
             input.form-control.rounded(type='search', placeholder='Search', aria-label='Search', aria-describedby='search-addon')
             button.btn.btn-outline-primary(type='button') Search
 
-        each timetable in timetables
-          .card
-            .card-block
-              h4
-                a(href="#")= timetable.location
-              each route in timetable.bus_routes
-                span.badge.badge-pill.badge-default= route
-              p.nextbus
-                a The next bus is at 
-                a= timetable.next_bus
+  .row
+    .col-12.col-md-16
+      .error= message
+      app-home-list Loading
+
+block scripts
+  script(src='/build/polyfills-LZBJRJJE.js')
+  script(src='/build/main-QIXQP3LD.js') 
+
+  

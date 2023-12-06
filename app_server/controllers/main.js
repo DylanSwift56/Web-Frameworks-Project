@@ -50,6 +50,12 @@ const index = function(req, res){
 		url : apiOptions.server + path,
 		method : 'GET',
 		json : {},
+		qs : {
+			lng : -0.9690884, 
+			lat : 51.455041, 
+			maxDistance : 20 
+
+		}
 	};
 	request(requestOptions, (err, response, body) => { 
 		let data = body;
