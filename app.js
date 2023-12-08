@@ -6,11 +6,34 @@ const favicon = require('serve-favicon');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+var flash = require('connect-flash');
 
 const index = require('./app_server/routes/index');
 const apiRoutes = require('./app_api/routes/index');
 
 const app = express();
+
+app.use(require('express-session')({
+secret: 'keyboard cat',
+resave: false,
+saveUninitialized: false
+}));
+
+
+app.use(passport.initialize());
+//app.use(flash());
+app.use(passport.session());
+
+const User = require('./app_server/models/registrations');
+// use static authenticate method of model in LocalStrategy
+passport.use(new LocalStrategy(User.authenticate()));
+// use static serialize and deserialize of model for passport session support
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'app_server', 'views'));

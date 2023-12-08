@@ -2,6 +2,8 @@
 
 const mongoose = require('mongoose');
 const timetables = mongoose.model('Timetables');
+const registrations = mongoose.model('Registration');
+
 
 const login = function(req, res){
   res.render('login', { title: 'Login' });
@@ -43,11 +45,26 @@ const timetablesCreate = function (req, res) {
 		}else{
 			res
 			.status(201)
-			.json(timetable)
+			.json(timetable);
 		}
 		
 	});
  };
+ 
+const createUser = function (req, res) {
+  registrations.create({
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    password: req.body.password
+  })
+  .then((registration) => {
+    res.status(201).json(registration);
+  })
+  .catch((err) => {
+    res.status(400).json(err);
+  });
+};
  
 const timetablesReadAll = function(req, res){
 		timetables
@@ -138,5 +155,6 @@ module.exports = {
   timetablesReadOne,
   timetablesUpdateOne,
   timetablesDeleteOne,
-  timetablesReadAll
+  timetablesReadAll,
+  createUser
  }

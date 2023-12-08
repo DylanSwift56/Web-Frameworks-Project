@@ -15,3 +15,4 @@ mongoose.connect(
 }
 
 require('./timetables');
+require('./registrations');

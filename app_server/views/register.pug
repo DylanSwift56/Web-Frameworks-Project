@@ -13,16 +13,16 @@ block content
             h3.panel-title
               | Please sign up to view bus timetables!
           .panel-body
-            form(role='form')
+            form(role='form' action="/register" method="post")
               .row
                 .col
                   .form-group
-                    input#first_name.form-control.input-sm(type='text' name='first_name' placeholder='First Name')
+                    input#first_name.form-control.input-sm(type='text' name='firstName' placeholder='First Name')
                 .col
                   .form-group
-                    input#last_name.form-control.input-sm(type='text' name='last_name' placeholder='Last Name')
+                    input#last_name.form-control.input-sm(type='text' name='lastName' placeholder='Last Name')
               .form-group
-                input#email.form-control.input-sm(type='email' name='email' placeholder='Email Address')
+                input#email.form-control.input-sm(type='text' name='username' placeholder='Email Address')
               .row
                 .col-xs-6.col-sm-6.col-md-6
                   .form-group

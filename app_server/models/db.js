@@ -1,7 +1,6 @@
 //Database Connection
 const mongoose = require('mongoose');
-const dbURI = "mongodb+srv://user1:4mh_xxUxkxmc@cluster0.swerpv6.mongodb.net/";
-
+const dbURI = "mongodb+srv://user1:4mh_xxUxkxmc@cluster0.swerpv6.mongodb.net/BusTimetables?retryWrites=true&w=majority";
 try {
    
 mongoose.connect(
@@ -16,3 +15,4 @@ mongoose.connect(
 }
 
 require('./timetables');
+require('./registrations');
