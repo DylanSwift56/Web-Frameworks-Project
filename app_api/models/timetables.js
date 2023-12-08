@@ -6,11 +6,7 @@ const timetablesSchema = new mongoose.Schema({
 			   required: true	
 			},
 	bus_routes: [String],
-	next_bus: String,
-	distance: {
-    type: [Number],
-    index: '2dsphere'
-  },
+	next_bus: String
 	});
 	
 const registrationSchema = new mongoose.Schema({

@@ -19,6 +19,10 @@ const register = function(req, res){
   res.render('register', { title: 'Register' });
 };
 
+const about = function(req, res){
+	res.render('about', {title: 'about'});
+};
+
 
 
  const _renderHomepage = function(req, res, responseBody){
@@ -50,12 +54,6 @@ const index = function(req, res){
 		url : apiOptions.server + path,
 		method : 'GET',
 		json : {},
-		qs : {
-			lng : -0.9690884, 
-			lat : 51.455041, 
-			maxDistance : 20 
-
-		}
 	};
 	request(requestOptions, (err, response, body) => { 
 		let data = body;
@@ -80,5 +78,6 @@ const index = function(req, res){
 module.exports = {
   index,
   login, 
-  register
+  register,
+  about
  }
