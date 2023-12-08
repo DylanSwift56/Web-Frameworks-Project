@@ -15,6 +15,10 @@ const apiRoutes = require('./app_api/routes/index');
 
 const app = express();
 
+app.listen(3000, function () {
+  console.log('app listening on port 3000!');
+ });
+
 
 app.use(require('express-session')({
 secret: 'keyboard cat',
