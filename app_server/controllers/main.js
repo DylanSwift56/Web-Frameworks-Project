@@ -62,7 +62,7 @@ const index = function(req, res){
 			return;
 		} else { 
 			console.log(body); 
-			for (let i = 0; i < data.length; i++) {
+			for (let i = 0; i < 4; i++) {
 				_renderHomepage(req, res, body); 
 			}
 		} 
