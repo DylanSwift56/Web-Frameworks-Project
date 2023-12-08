@@ -59,16 +59,16 @@ const index = function(req, res){
 		let data = body;
 		if (err) { 
 			console.log(err); 
+			return;
 		} else { 
 			console.log(body); 
+			for (let i = 0; i < data.length; i++) {
+				_renderHomepage(req, res, body); 
+			}
 		} 
 
-		if (data.length) {
-			 for (let i = 0; i < data.length; i++) {
-				_renderHomepage(req, res, data); 
-			}
-		}
-		_renderHomepage(req, res, body); 
+		
+		//_renderHomepage(req, res, body); 
 	} 
 );
 };
