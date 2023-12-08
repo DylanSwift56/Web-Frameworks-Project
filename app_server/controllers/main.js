@@ -5,7 +5,7 @@
 const request = require('request');
 
 const apiOptions = { 
-server : 'http://localhost:3000' 
+server :'http://localhost:3000' 
 }; 
 if (process.env.NODE_ENV === 'production') { 
 server = 'https://web-frameworks-project-bslt.onrender.com'; 
@@ -59,11 +59,11 @@ const index = function(req, res){
 		let data = body;
 		if (err) { 
 			console.log(err); 
-		} else if (response.statusCode === 200) { 
+		} else { 
 			console.log(body); 
 		} 
 
-		if (response.statusCode === 200 && data.length) {
+		if (data.length) {
 			 for (let i = 0; i < data.length; i++) {
 				_renderHomepage(req, res, data); 
 			}
